@@ -34,6 +34,7 @@ Requests must be encoded using the `multipart/form-data` content type.
 
 ## Caveats
 - At the moment only `Bing` and `Google` providers are supported
+- ADs are not cleaned up from the result list
 - The app fetches only the first few pages of results from the search engines.
 - The requests to fetch data from the search engines happen in-thread during an HTTP request hence there might be occasional errors. A polling system where the server gets polled for the search status would be more adequate.
 - Authentication is performed using hardcoded credentials. Environment variables or a secret manager would be a smarter solution.
